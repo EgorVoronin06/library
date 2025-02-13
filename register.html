@@ -1,0 +1,106 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   MindLink
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right bottom, #65ffb7, #4d4dfc);
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .container {
+            text-align: center;
+            color: white;
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+        .login-box {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .login-box input[type="text"], .login-box input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .login-box input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #000;
+            color: white;
+            cursor: pointer;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .tabs div {
+            cursor: pointer;
+        }
+        button {
+            width: 50%;
+            padding: 10px;
+            background: #000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 10px;
+        }
+        .form-container button:hover {
+            background: #333;}
+  </style>
+ </head>
+ <body>
+  <img alt="Blue abstract background" class="background" src="https://placehold.co/1920x1080/0000FF/FFFFFF?text=Background+Image"/>
+  <div class="container">
+   <img alt="Tangle logo" class="logo" src="https://placehold.co/100x100/000000/FFFFFF?text=Logo"/>
+   <h1>
+    MindLink
+   </h1>
+   <div class="login-box">
+    <div class="tabs">
+     <a href="registration.html">
+      Зарегистрироваться
+     </a>
+     <button>
+      Вход
+     </button>
+    </div>
+    <form>
+     <input placeholder="Логин" type="text"/>
+     <input placeholder="Пароль" type="password"/>
+     <input type="submit" value="Войти"/>
+    </form>
+   </div>
+  </div>
+ </body>
+</html>
