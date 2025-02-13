@@ -1,0 +1,161 @@
+<html>
+ <head>
+  <title>
+   Portfolio
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: linear-gradient(to right bottom, #65ffb7, #4d4dfc);/* Градиент фона */
+    min-height: 100vh;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: #1c1c1c;
+        }
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .navbar .social-icons a {
+            margin: 0 10px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 80px);
+            text-align: center;
+        }
+        .content {
+            max-width: 600px;
+        }
+        .content h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+        .content .btn {
+            background-color: #00c853;
+            color: #ffffff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .profile-pic {
+            margin-left: 50px;
+        }
+        .profile-pic img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .footer h3 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        .footer .logos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .footer .logos img {
+            width: 100px;
+            height: 50px;
+            filter: brightness(0) invert(1);
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-pic {
+                margin: 20px 0 0 0;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <div class="navbar">
+   <div class="nav-links">
+    <a href="#">
+     регистрация 
+    </a>
+    <a href=register.html>
+     вход
+    </a>
+    <a href="#">
+     каталог
+    </a>
+    <a href="workspace.html">
+     личный кабинет
+    </a>
+    <a href="#">
+      
+    </a>
+   </div>
+   <div class="social-icons">
+    <a href="#">
+     <i class="fab fa-linkedin">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-behance">
+     </i>
+    </a>
+    <a href="#">
+     <i class="fab fa-twitter">
+     </i>
+    </a>
+   </div>
+  </div>
+  <div class="container">
+   <div class="content">
+    <h1>
+     MindLink
+    </h1>
+    <p>
+      Платформа для психологической поддержки 
+    </p>
+    <a class="btn" href="#">
+     Личный кабинет &gt;
+    </a>
+   </div>
+   <div class="profile-pic">
+    <img alt="Profile picture of a smiling person" src="https://placehold.co/200x200"/>
+   </div>
+  </div>
+  <div class="footer">
+   <h3>
+    Worked with
+   </h3>
+   <div class="logos">
+    <img alt="ClickUp logo" src="https://placehold.co/100x50"/>
+    <img alt="Dropbox logo" src="https://placehold.co/100x50"/>
+    <img alt="Paychex logo" src="https://placehold.co/100x50"/>
+    <img alt="Elastic logo" src="https://placehold.co/100x50"/>
+    <img alt="Stripe logo" src="https://placehold.co/100x50"/>
+   </div>
+  </div>
+ </body>
+</html>
