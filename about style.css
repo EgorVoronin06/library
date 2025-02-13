@@ -1,0 +1,80 @@
+.navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: #1c1c1c;
+        }
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .navbar .social-icons a {
+            margin: 0 10px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 80px);
+            text-align: center;
+        }
+        .content {
+            max-width: 600px;
+        }
+        .content h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+        .content .btn {
+            background-color: #00c853;
+            color: #ffffff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .profile-pic {
+            margin-left: 50px;
+        }
+        .profile-pic img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .footer h3 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        .footer .logos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .footer .logos img {
+            width: 100px;
+            height: 50px;
+            filter: brightness(0) invert(1);
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-pic {
+                margin: 20px 0 0 0;
+            }
