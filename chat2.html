@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Chat with Psychologist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        .chat-message {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-blue-200 to-green-200 min-h-screen flex items-center justify-center p-4">
+<div class="flex w-full max-w-6xl space-x-4">
+    <!-- Sidebar -->
+    <div class="bg-gray-900 text-white p-4 rounded-lg w-1/4">
+        <div class="flex items-center space-x-4 mb-4">
+            <img alt="Profile picture of the therapist" class="rounded-full w-12 h-12" height="50" src="https://storage.googleapis.com/a1aa/image/FhhQbEBWqaF8_ZuBWvpcK57aSwOEXL_woOgLWHCelag.jpg" width="50"/>
+            <div>
+                <div class="font-bold">Федотова Е. М.</div>
+                <div class="text-sm">Дежурный терапевт</div>
+            </div>
+        </div>
+        <div class="flex items-center space-x-2 mb-4">
+            <span class="text-green-500"><i class="fas fa-circle"></i></span>
+            <span>Доступен</span>
+        </div>
+        <div class="mb-4">
+            <div class="font-bold">ИДЕТ ПРИЕМ</div>
+            <div>Петров К. 01:02</div>
+        </div>
+        <div class="mb-4">
+            <div class="font-bold">В ОЧЕРЕДИ</div>
+            <div>5 пациентов</div>
+        </div>
+        <div>
+            <div class="font-bold mb-2">ЖДУТ ЗАКЛЮЧЕНИЯ</div>
+            <div class="text-red-500">Почеваева Д. 1 месяц</div>
+            <div class="text-red-500">Сергеенко В. 2 дня</div>
+            <div class="text-red-500">Семёнов Б. 17 часов</div>
+        </div>
+        <div class="mt-4 flex space-x-2">
+            <button class="text-white"><i class="fas fa-search"></i></button>
+            <button class="text-white"><i class="fas fa-cog"></i></button>
+        </div>
+    </div>
+    <!-- Chat Section -->
+    <div class="bg-white p-4 rounded-lg flex-1">
+        <div class="font-bold mb-2">Чат с психологом</div>
+        <div id="chat" class="border rounded-lg p-4 h-96 mb-4 overflow-y-auto"></div>
+        <div class="flex items-center space-x-2">
+            <input id="messageInput" class="flex-1 border rounded-lg p-2" placeholder="Type your message..." type="text"/>
+            <button id="sendButton" class="bg-blue-500 text-white p-2 rounded-lg">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    <!-- Medical Conclusion Section -->
+    <div class="bg-white p-4 rounded-lg w-1/4">
+        <div class="font-bold mb-2">Медзаключение</div>
+        <div class="mb-4">
+            <label class="inline-flex items-center">
+                <input class="form-checkbox" type="checkbox"/>
+                <span class="ml-2">Для взрослого</span>
+            </label>
+            <label class="inline-flex items-center ml-4">
+                <input class="form-checkbox" type="checkbox"/>
+                <span class="ml-2">Для ребёнка</span>
+            </label>
+        </div>
+        <div class="mb-4">
+            <label class="block mb-2">Жалобы пациента</label>
+            <textarea class="w-full border rounded-lg p-2 h-24"></textarea>
+        </div>
+        <div class="mb-4">
+            <label class="block mb-2">Анамнез заболевания</label>
+            <textarea class="w-full border rounded-lg p-2 h-24"></textarea>
+        </div>
+        <button id="finishButton" class="bg-red-500 text-white w-full p-2 rounded-lg">
+            Завершить приём
+        </button>
+    </div>
+</div>
+
+<script>
+    const chat = document.getElementById('chat');
+    const messageInput = document.getElementById('messageInput');
+    const sendButton = document.getElementById('sendButton');
+    const finishButton = document.getElementById ('finishButton');
+
+    sendButton.addEventListener('click', () => {
+        const message = messageInput.value.trim();
+        if (message) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('chat-message');
+            messageElement.textContent = message;
+            chat.appendChild(messageElement);
+            messageInput.value = '';
+            chat.scrollTop = chat.scrollHeight; // Scroll to the bottom
+        }
+    });
+
+    messageInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            sendButton.click();
+        }
+    });
+
+    finishButton.addEventListener('click', () => {
+        alert('Приём завершён. Спасибо за использование сервиса!');
+        // Здесь можно добавить дополнительную логику для завершения приёма
+    });
+</script>
+</body>
+</html>
